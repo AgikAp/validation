@@ -100,7 +100,7 @@ func validator(fieldName string, value reflect.Value, rule string, req string, m
 			err = validRegexp(fieldName, value, messages, emailPattern, constantMessage["email"])
 			break
 		case "notEmpty":
-			err = validRegexp(fieldName, value, messages, emailPattern, constantMessage["email"])
+			err = validNotEmptyThan(fieldName, value, messages)
 			// case "image":
 			// 	_ = validImage(fieldName, value, messages)
 		}
